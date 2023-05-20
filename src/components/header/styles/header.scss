@@ -1,0 +1,70 @@
+@import "../../../assets/styles/colors";
+
+nav {
+  border-radius: 0  10px 10px ;
+  box-shadow: $shadow;
+
+
+}
+
+.nav  {
+  width: 300px;
+  overflow: hidden;
+  color: $primary;
+
+
+  align-items: center;
+  display: flex;
+  padding: 2px 5px;
+  height: 60px;
+  &-row {
+
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    .user {
+      color: #eee;
+      margin-left: 30%;
+      display: flex;
+      flex: auto 1;
+      text-align: center;
+      justify-items: center;
+      justify-content: space-between;
+      transition: .3s all;
+
+      i {
+        display: flex;
+        color: var(--tg-theme-text-color);
+        transition: .3s all;
+        margin-top: 1.5px;
+        width: 50px;
+        margin-right: 40px;
+
+        &:hover {
+          color: $hover;
+        }
+      }
+      span {
+        margin-right: 10px;
+        color: var(--tg-theme-text-color);
+      }
+      &:hover {
+        color:$hover;
+      }
+    }
+    .logo  {
+      display: flex;
+    }
+    .hamburger {
+      margin-left: 20px;
+      transition: .3s all;
+      i {
+
+      }
+      &:hover {
+        color: $hover;
+      }
+    }
+  }
+}

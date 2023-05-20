@@ -1,20 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
 import {useEffect} from "react";
+import Header from "./components/header/header";
+import {useTelegram} from "./assets/hooks/useTelegram";
+import {Route, Routes} from "react-router-dom";
+import ProductList from "./components/products/product-list/product-list";
+import Form from "./components/form/form";
+
 
 function App() {
-    const tg = window.Telegram
+    const {tg, close, toggle} = useTelegram();
  useEffect(() => {
-   tg.ready()
+   tg.ready();
  })
-    const close =() => {
-        tg.close()
-    }
+
+
   return (
     <div className="App">
+        <Header/>
+          <button className="main-btn" onClick={close}>X</button>
       <div className="container">
-          <button onClick={close}>X</button>
+          <Routes>
+
+          <Route index element={<ProductList />}/>
+          <Route path={'/form'} element={<Form/>}/>
+          </Routes>
       </div>
     </div>
   );

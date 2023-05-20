@@ -1,0 +1,22 @@
+.container {
+  max-width: 400px;
+
+  margin:  0 auto;
+}
+.main-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 3px 5px;
+  background: #4965e0;
+  color: white;
+  transition: all .3s;
+ &:active {
+   box-shadow: inset 1px .5px 1px rgba(0,0,0.6);
+   padding: 2.7px 4.7px
+ ;
+ }
+}
+.App {
+  justify-content: center;
+}
