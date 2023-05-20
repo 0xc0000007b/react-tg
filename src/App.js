@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import WebApp from "@twa-dev/sdk";
+
 import {useEffect} from "react";
 
 function App() {
